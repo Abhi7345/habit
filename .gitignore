@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+habitflow.db
+target/
+.idea/
+.vscode/
+.vercel/

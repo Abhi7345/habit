@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HabitFlow | Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="topbar">
+        <div>
+          <p class="eyebrow">HabitFlow</p>
+          <h1>Admin controls</h1>
+        </div>
+
+        <button id="menuToggleBtn" class="menu-toggle" type="button" aria-expanded="false" aria-controls="topbarNav">
+          Menu
+        </button>
+
+        <nav id="topbarNav" class="topbar-nav">
+          <a class="nav-link active" href="admin.html">Overview</a>
+          <a class="nav-link" href="admin-review.html">Review</a>
+          <button id="logoutBtn" class="nav-link nav-button" type="button">Logout</button>
+        </nav>
+      </aside>
+
+      <main class="page-shell">
+        <header class="page-intro">
+          <div>
+            <p class="eyebrow">Admin</p>
+            <h2>Manage the habit tracker</h2>
+            <p class="helper-text">Starter admin login: <strong>abhi</strong></p>
+          </div>
+          <div class="status-strip">
+            <article class="status-pill">
+              <span class="status-label">Date</span>
+              <strong id="pageDate">-</strong>
+            </article>
+            <article class="status-pill">
+              <span class="status-label">Live users</span>
+              <strong id="quickUsers">0</strong>
+            </article>
+          </div>
+        </header>
+
+        <section class="support-banner">
+          <strong>Customer care</strong>
+          <span>To report any issue, email <a href="mailto:kav224012120@gmail.com">kav224012120@gmail.com</a></span>
+        </section>
+
+        <section class="summary-grid">
+          <article class="card summary-card">
+            <span>Total habits</span>
+            <strong id="adminHabitCount">0</strong>
+          </article>
+          <article class="card summary-card">
+            <span>Total completions</span>
+            <strong id="adminCompletionCount">0</strong>
+          </article>
+          <article class="card summary-card">
+            <span>Completed today</span>
+            <strong id="adminActiveToday">0</strong>
+          </article>
+          <article class="card summary-card">
+            <span>Total users</span>
+            <strong id="adminUserCount">0</strong>
+          </article>
+        </section>
+
+        <section class="card narrow-card">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">Control room</p>
+              <h3>System actions</h3>
+            </div>
+          </div>
+
+          <div class="credential-card simple-copy">
+            <p>Restore demo habits for every user or clear all stored habit data.</p>
+            <p>The overview below now also includes user details and completed task history in table form.</p>
+          </div>
+
+          <div class="admin-actions">
+            <button id="seedBtn" class="primary-btn" type="button">Restore starter data</button>
+            <button id="resetBtn" class="danger-btn" type="button">Clear all habits</button>
+          </div>
+
+          <form id="deleteUserForm" class="delete-user-form">
+            <label class="field">
+              <span>Delete user by name</span>
+              <input id="deleteUsername" type="text" placeholder="Enter username to delete" required />
+            </label>
+            <button class="danger-btn" type="submit">Delete user</button>
+          </form>
+          <p id="deleteUserMessage" class="message"></p>
+        </section>
+
+        <section class="card">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">User records</p>
+              <h3>User info and completed tasks</h3>
+            </div>
+          </div>
+          <div id="adminHabitTable"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/admin.js"></script>
+  </body>
+</html>

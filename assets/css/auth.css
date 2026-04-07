@@ -1,0 +1,101 @@
+.site-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.marketing-panel,
+.auth-panel {
+  padding: 40px;
+}
+
+.marketing-panel {
+  display: flex;
+  align-items: center;
+}
+
+.marketing-card {
+  max-width: 560px;
+}
+
+.marketing-card h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+}
+
+.lead {
+  margin-top: 16px;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+.feature-list {
+  margin-top: 32px;
+  display: grid;
+  gap: 14px;
+}
+
+.plain-tile {
+  padding: 18px 20px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.plain-tile strong {
+  display: block;
+  margin-bottom: 6px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.auth-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  width: min(500px, 100%);
+  padding: 28px;
+  border-radius: var(--radius-xl);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.form-stack {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.message {
+  min-height: 20px;
+}
+
+.auth-divider {
+  margin: 24px 0;
+  height: 1px;
+  background: var(--line);
+}
+
+.compact-heading {
+  margin-bottom: -2px;
+}
+
+@media (max-width: 980px) {
+  .site-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .marketing-panel {
+    padding-bottom: 8px;
+  }
+}
+
+@media (max-width: 720px) {
+  .marketing-panel,
+  .auth-panel {
+    padding: 20px;
+  }
+}

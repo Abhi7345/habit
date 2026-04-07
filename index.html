@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HabitFlow | Daily Habit Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+  </head>
+  <body>
+    <div class="site-shell simple-auth-shell">
+      <section class="marketing-panel">
+        <div class="marketing-card">
+          <p class="eyebrow">HabitFlow</p>
+          <h1>Simple daily habit tracking.</h1>
+          <p class="lead">
+            Keep your habits in one clear place, check them off for today, and
+            open separate review pages when you want the bigger picture.
+          </p>
+
+          <div class="feature-list">
+            <article class="plain-tile">
+              <strong>Quick daily tracking</strong>
+              <span>Add a habit and mark it done in seconds.</span>
+            </article>
+            <article class="plain-tile">
+              <strong>Review pages</strong>
+              <span>Open a separate page for progress, streaks, and history.</span>
+            </article>
+            <article class="plain-tile">
+              <strong>Admin overview</strong>
+              <span>Inspect users and stored records from a dedicated review page.</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <main class="auth-panel">
+        <section class="auth-card">
+          <div class="section-heading">
+            <p class="eyebrow">Login</p>
+            <h2>Open your tracker</h2>
+            <p>Sign in to continue, or create a user account to get started.</p>
+          </div>
+
+          <form id="loginForm" class="form-stack">
+            <label class="field">
+              <span>Username</span>
+              <input id="username" type="text" placeholder="Enter username" required />
+            </label>
+
+            <label class="field">
+              <span>Password</span>
+              <input id="password" type="password" placeholder="Enter password" required />
+            </label>
+
+            <label class="field">
+              <span>Login as</span>
+              <select id="role">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+              </select>
+            </label>
+
+            <button class="primary-btn" type="submit">Continue</button>
+            <p class="message" id="authMessage"></p>
+          </form>
+
+          <div class="auth-divider"></div>
+
+          <form id="registerForm" class="form-stack">
+            <div class="section-heading compact-heading">
+              <p class="eyebrow">Create account</p>
+              <h3>New user signup</h3>
+            </div>
+
+            <label class="field">
+              <span>Username</span>
+              <input id="registerUsername" type="text" placeholder="Choose a username" required />
+            </label>
+
+            <label class="field">
+              <span>Password</span>
+              <input id="registerPassword" type="password" placeholder="Choose a password" required />
+            </label>
+
+            <button class="secondary-btn" type="submit">Create account</button>
+            <p class="message" id="registerMessage"></p>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HabitFlow | My Habits</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="topbar">
+        <div>
+          <p class="eyebrow">HabitFlow</p>
+          <h1>My daily habits</h1>
+        </div>
+
+        <button id="menuToggleBtn" class="menu-toggle" type="button" aria-expanded="false" aria-controls="topbarNav">
+          Menu
+        </button>
+
+        <nav id="topbarNav" class="topbar-nav">
+          <a class="nav-link active" href="user.html">Tracker</a>
+          <a class="nav-link" href="user-review.html">Review</a>
+          <button id="logoutBtn" class="nav-link nav-button" type="button">Logout</button>
+        </nav>
+      </aside>
+
+      <main class="page-shell">
+        <header class="page-intro">
+          <div>
+            <p class="eyebrow">Today</p>
+            <h2>Stay focused on the next checkmark</h2>
+            <p class="helper-text">Signed in as <strong id="sidebarIdentity">user</strong></p>
+          </div>
+          <div class="status-strip">
+            <article class="status-pill">
+              <span class="status-label">Date</span>
+              <strong id="pageDate">-</strong>
+            </article>
+            <article class="status-pill">
+              <span class="status-label">Completion</span>
+              <strong id="quickCompletion">0%</strong>
+            </article>
+          </div>
+        </header>
+
+        <section class="support-banner">
+          <strong>Need help?</strong>
+          <span>Report any issue to <a href="mailto:kav224012120@gmail.com">kav224012120@gmail.com</a></span>
+        </section>
+
+        <section class="summary-grid compact-grid">
+          <article class="card summary-card">
+            <span>Completed today</span>
+            <strong id="completedToday">0 / 0</strong>
+          </article>
+          <article class="card summary-card">
+            <span>Best streak</span>
+            <strong id="bestStreak">0 days</strong>
+          </article>
+          <article class="card summary-card">
+            <span>Total habits</span>
+            <strong id="habitCount">0</strong>
+          </article>
+        </section>
+
+        <section class="card">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">Add habit</p>
+              <h3>Create a daily routine</h3>
+            </div>
+          </div>
+
+          <form id="habitForm" class="habit-form simple-form">
+            <label class="field">
+              <span>Habit name</span>
+              <input id="habitName" type="text" placeholder="Meditate 10 minutes" required />
+            </label>
+
+            <label class="field">
+              <span>Category</span>
+              <input id="habitCategory" type="text" placeholder="Health, Study, Work" required />
+            </label>
+
+            <label class="field">
+              <span>Goal note</span>
+              <input id="habitGoal" type="text" placeholder="Before breakfast" required />
+            </label>
+
+            <button class="primary-btn" type="submit">Add habit</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">Habits</p>
+              <h3>Track your day</h3>
+            </div>
+          </div>
+          <div id="habitList" class="habit-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/user.js"></script>
+  </body>
+</html>

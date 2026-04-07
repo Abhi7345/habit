@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HabitFlow | Admin Review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="topbar">
+        <div>
+          <p class="eyebrow">HabitFlow</p>
+          <h1>Admin review</h1>
+        </div>
+
+        <button id="menuToggleBtn" class="menu-toggle" type="button" aria-expanded="false" aria-controls="topbarNav">
+          Menu
+        </button>
+
+        <nav id="topbarNav" class="topbar-nav">
+          <a class="nav-link" href="admin.html">Overview</a>
+          <a class="nav-link active" href="admin-review.html">Review</a>
+          <button id="logoutBtn" class="nav-link nav-button" type="button">Logout</button>
+        </nav>
+      </aside>
+
+      <main class="page-shell">
+        <header class="page-intro">
+          <div>
+            <p class="eyebrow">Review</p>
+            <h2>Inspect users and stored habit records</h2>
+          </div>
+          <div class="status-strip">
+            <article class="status-pill">
+              <span class="status-label">Date</span>
+              <strong id="pageDate">-</strong>
+            </article>
+            <article class="status-pill">
+              <span class="status-label">Live users</span>
+              <strong id="quickUsers">0</strong>
+            </article>
+          </div>
+        </header>
+
+        <section class="support-banner">
+          <strong>Customer care</strong>
+          <span>To report any issue, email <a href="mailto:kav224012120@gmail.com">kav224012120@gmail.com</a></span>
+        </section>
+
+        <section class="summary-grid">
+          <article class="card summary-card">
+            <span>Total habits</span>
+            <strong id="adminHabitCount">0</strong>
+          </article>
+          <article class="card summary-card">
+            <span>Total completions</span>
+            <strong id="adminCompletionCount">0</strong>
+          </article>
+          <article class="card summary-card">
+            <span>Completed today</span>
+            <strong id="adminActiveToday">0</strong>
+          </article>
+          <article class="card summary-card">
+            <span>Total users</span>
+            <strong id="adminUserCount">0</strong>
+          </article>
+        </section>
+
+        <section class="review-grid">
+          <section class="card">
+            <div class="section-heading split-heading">
+              <div>
+                <p class="eyebrow">Weekly activity</p>
+                <h3>Completion totals by day</h3>
+              </div>
+            </div>
+            <div id="adminWeekGrid" class="week-grid"></div>
+          </section>
+
+          <section class="card">
+            <div class="section-heading split-heading">
+              <div>
+                <p class="eyebrow">Completion rate</p>
+                <h3>7 day consistency</h3>
+              </div>
+            </div>
+            <div class="review-metric">
+              <strong id="adminCompletionRate">0%</strong>
+              <p class="helper-text">Based on all stored habits across the last 7 days.</p>
+            </div>
+          </section>
+        </section>
+
+        <section class="card">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">Records</p>
+              <h3>All users and their habits</h3>
+            </div>
+          </div>
+          <div id="adminHabitTable"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/admin.js"></script>
+  </body>
+</html>

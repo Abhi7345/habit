@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
+    }
+  ],
+  "functions": {
+    "api/index.py": {
+      "excludeFiles": "{assets/**,__pycache__/**,habitflow.db,start_server.bat,render.yaml,Procfile}"
+    }
+  }
+}
